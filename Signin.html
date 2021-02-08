@@ -48,7 +48,7 @@
     p{
     color:rgb(13, 13, 14);
     margin-left: 0cm;
-    margin-top: 0.5cm;
+    margin-top: 2cm;
     font-style: normal;
     }
 </style>
@@ -59,13 +59,13 @@
             <nav>
                
                 <a href="#default" class="logo" style="font-size: 25px;">X-workz</a> 
-                <a style="margin-left: 16cm;" class="btn btn-success"  href="#" >Sign-up</a>
+                <a style="margin-left: 16cm;" class="btn btn-success"  href="Signup.html" >Sign-up</a>
                 <a style="margin-left: 1cm;"  class="btn btn-success"  href="#" >Sign-in</a>
             </nav>
         </div>
     </div>
     <div class="container">
-        <div><h1><p>Login Form</p></h1></div>
+        <div><h1><p>SignIn Form</p></h1></div>
         <div class="col-lg-8 m- auto d-block">
         <form  action="#" onsubmit="return validateForm()" class="bg-light"> 
 
@@ -80,20 +80,7 @@
         <input type="text"   autocomplete="off" class="form-control"  placeholder="Enter a Password" id="password">
         <span id="passwords" class="text-danger font-control"></span> </div>
         
-        <div class="form-group">
-        <div>Confirm Password</div>
-        <input type="text"  autocomplete="off" class="form-control"  placeholder="Confirm Password" id="confirm password"  > 
-        <span id="confirmpass" class="text-danger font-control"></span> </div>
-        
-        <div class="form-group">
-        <div>Email</div>
-        <input type="email"  class="form-control"  id="email" placeholder="Enter an Email"> 
-        <span id="emailids" class="text-danger font-control"></span></div>
-        
-        <div class="form-group">
-        <div>Enter a phone number</div>
-        <input type="tel"  autocomplete="off" class="form-control" id="phoneno">
-        <span id="mobileno" class="text-danger font-control"></span> </div>
+       
          
         <div><input type=submit name="submit" value="Submit" class="btn btn-success"></div> 
 
@@ -108,9 +95,7 @@
         function validateForm(){
             var user=document.getElementById('user').value;
             var password=document.getElementById('password').value;
-            var conpass=document.getElementById('confirm password').value;
-            var email=document.getElementById('email').value;
-            var phoneno=document.getElementById('phoneno').value;
+           
     
             if(user==""){
                document.getElementById('username').innerHTML = "**Please enter valid name**";
@@ -130,34 +115,7 @@
                return false;
             }
     
-        
-            if(conpass!=password){
-               document.getElementById('confirmpass').innerHTML = "**password are not matching**";
-               return false;
-            }
             
-            if(conpass==""){
-               document.getElementById('confirmpass').innerHTML = "**Please enter valid password**";
-               return false;
-            }
-    
-           if(email==""){
-               document.getElementById('emailids').innerHTML = "**Please enter valid email id**";
-               return false;
-            }
-        
-           if((phoneno=="")){
-               document.getElementById('mobileno').innerHTML = "**Please enter valid phone number**";
-               return false;
-            }
-            if(isNaN(phoneno)){
-               document.getElementById('mobileno').innerHTML = "**Please enter digits only**";
-               return false;
-            }
-            if(phoneno.length>=11){
-               document.getElementById('mobileno').innerHTML = "**phone number should not exceed 10 digits**";
-               return false;
-            }
         }
         
     </script>
